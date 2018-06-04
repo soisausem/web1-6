@@ -14,7 +14,7 @@ public class ArrowController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        transform.Translate(0, -0.1f, 0);
+        transform.Translate(0, -0.15f, 0);
 
         if (transform.position.y < -5.0f)
         {
@@ -32,7 +32,6 @@ public class ArrowController : MonoBehaviour {
         {
             GameObject director = GameObject.Find("GameDirector");
             director.GetComponent<GameDirector>().DecreaseHp();
-
             Destroy(gameObject);
         }
 	}
